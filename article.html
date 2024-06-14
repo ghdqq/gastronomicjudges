@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+   body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(#8D464A, #271314);
+    background-attachment: fixed;
+    overflow: auto; 
+  }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  .fixed-header .logo-link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 70px;
+    margin-right: 35px;
+    margin-left: 15px;
+  }
+  .fixed-header .section-title {
+    height: 54px;
+    font-size: 30px;
+    line-height: 54px;
+  }
+  /* Изменения для текста статьи */
+  .article-text {
+    color: white; /* Цвет текста статьи */
+		margin-left: 5%;
+		margin-right: 8%;
+		text-indent: 1.25cm; 
+		text-align: justify; /* Выравнивание текста по ширине */
+  }
+
+  /* Стили для отображения названия статьи */
+  .article-title {
+    display: block; /* Убедитесь, что название статьи отображается */
+    margin-top: 10%; /* Отступ сверху, чтобы не перекрывалось шапкой */
+    color: white; /* Цвет названия статьи */
+		font-size: 60px; /* Новый размер названия статьи */
+  }
+  /* Стили для адаптивности картинок */
+  .article-image {
+    width: 500px; /* Фиксированная ширина */
+    height: 500px; /* Фиксированная высота */
+    background-color: #ddd;
+    margin-bottom: 20px;
+    /* Центрируем картинку */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+	.article-image-caption {
+    color: white; /* Цвет подписи */
+    text-align: center; /* Выравнивание по центру */
+    font-size: 20px; /* Размер шрифта подписи */
+    margin-top: 5px; /* Отступ сверху */
+  }
+
+  /* Адаптивность для .article-container */
+  .article-container {
+    padding: 20px 5%; /* Процентные отступы для адаптивности */
+  }
+
+  /* Адаптивность для .article-title и .article-text */
+  .article-title, .article-text {
+    font-size: calc(16px + 1vw); /* Адаптивный размер шрифта */
+  }
+
+  /* Медиа-запросы для управления адаптивностью на разных размерах экрана */
+  @media (max-width: 400px) {
+    .fixed-header .logo-link, .fixed-header .section-title {
+      font-size: 5vw; /* Увеличиваем размер шрифта на маленьких экранах */
+    }
+    .article-title, .article-text {
+      font-size: calc(12px + 2vw); /* Увеличиваем базовый размер шрифта */
+    }
+  }
+
+  @media (min-width: 2500px) {
+    .fixed-header .logo-link, .fixed-header .section-title {
+      font-size: 24px; /* Фиксированный размер шрифта на больших экранах */
+    }
+    .article-title, .article-text {
+      font-size: 24px; /* Фиксированный размер шрифта */
+    }
+		
+  }
+</style>
+</head>
+<body>
+  <div class="fixed-header">
+    <!-- Обновляем ссылку на логотип -->
+    <a href="index.html" class="logo-link">G</a>
+    <div class="section-title">Подборки</div>
+  </div>
+  <!-- Контейнер для текста статьи -->
+  <div class="article-container">
+    <!-- Убедитесь, что название статьи отображается под шапкой -->
+    <div class="article-title"><center>Название статьи</center></div>
+    <p class="article-text">Санкт-Петербург, город с богатой историей и культурой, также известен своими кулинарными традициями. 
+			Одним из таких мест, где можно ощутить вкус Балтики, является ресторан "Балтийская Кухня", предлагающий блюда, 
+			приготовленные из свежайших морепродуктов, доставленных прямо из холодных вод Балтийского моря.
+		</p>
+		<img src="jpeg/1рест.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Балтийская Кухня"</figcaption>
+    </figure>
+
+    <p class="article-text">"Дымный Ларёк" – это уютное заведение, где можно попробовать копчёную рыбу и другие деликатесы. 
+			Здесь каждое блюдо рассказывает историю о морских путешествиях и традициях копчения, которые передаются из поколения в поколение.</p>
+		<img src="jpeg/дымный.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Дымный Ларёк"</figcaption>
+	</figure>
+	
+		<p class="article-text">В "Петербургском Погребке" подают закуски, которые идеально сочетаются с холодным пивом или водкой. 
+			Это место славится своими селёдочками под шубой и картофелем с укропом, напоминая о том, что простота иногда – это истинный вкус.</p>
+		<img src="jpeg/погреб.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Петербургский Погребок"</figcaption>
+	</figure>
+	
+		<p class="article-text">Ресторан "Новая Волна" представляет классические блюда в современной интерпретации. 
+			Шеф-повара экспериментируют с текстурами и сочетаниями, создавая новые вкусовые ощущения из знакомых ингредиентов.</p>
+		<img src="jpeg/волна.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Новая Волна"</figcaption>
+	</figure>
+	
+		<p class="article-text">"Балтийская Выпечка" – это кондитерская, где можно насладиться разнообразием пирогов, 
+			начинённых мясом, рыбой или ягодами. Каждый пирог – это отдельная история, испечённая с любовью и заботой.</p>
+		<img src="jpeg/дляпирог.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Балтийская Выпечка"</figcaption>
+	</figure>
+	
+		<p class="article-text">Ресторан "Морской Взгляд" предлагает не только изысканные блюда, но и неповторимый вид на залив. 
+			Здесь можно насладиться ужином, наблюдая за закатом и кораблями, медленно проплывающими вдоль горизонта.</p>
+		<img src="jpeg/вода.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Морской Взгляд"</figcaption>
+	</figure>
+	
+		<p class="article-text">Петербургская гастрономическая сцена – это мозаика вкусов и ароматов, каждый из которых уникален и неповторим. 
+			"Балтийские Блюда" – это не просто еда, это путешествие по истории и культуре, которое каждый гурман должен испытать.</p>
+		<img src="jpeg/послед.jpg" alt="Описание изображения" class="article-image">
+		<figcaption class="article-image-caption">Ресторан "Балтийские Блюда"</figcaption>
+	</figure>
+	
+
+  </div>
+</body>
+</html>

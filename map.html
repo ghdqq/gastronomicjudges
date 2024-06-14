@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(#8D464A, #271314);
+    background-attachment: fixed;
+    overflow: auto; 
+    display: flex; /* Добавляем Flexbox */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+  }
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  .fixed-header .logo-link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 70px;
+    margin-right: 35px;
+    margin-left: 15px;
+  }
+  .fixed-header .section-title {
+    height: 54px;
+    font-size: 45px;
+    line-height: 54px;
+  }
+  /* Стили для контейнера карты */
+  .map-container {
+    width: 700px; /* Ширина контейнера */
+    height: 430px; /* Высота контейнера */
+    z-index: 1; /* Убедитесь, что карта не перекрывается шапкой */
+  }
+
+</style>
+</head>
+<body>
+  <div class="fixed-header">
+    <a href="index.html" class="logo-link">
+      <div class="logo">G</div>
+    </a>
+    <div class="section-title">Карта</div>
+  </div>
+  <!-- Обертка для карты -->
+  <div class="map-container">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7014b6589dc01f7ee3373c61aff53e13e66522ed87b613dcb4f47754c9e7c45&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+  </div>
+</body>
+</html>

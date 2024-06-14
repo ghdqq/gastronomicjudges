@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(#8D464A, #271314);
+  background-attachment: fixed;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+	
+}
+.fixed-header .logo-link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 70px;
+  margin-right: 35px;
+  margin-left: 15px;
+}
+.fixed-header .section-title {
+  height: 54px;
+  font-size: 45px;
+  line-height: 54px;
+}
+
+.content-container {
+  position: relative; /* Относительное позиционирование для контейнера */
+  top: calc(13% + 50px); /* Расположение на 50px ниже шапки */
+  left: 0;
+  width: 100%;
+}
+
+.photo-gallery {
+  position: fixed;
+  top: 13%; /* Установите top равным высоте .fixed-header */
+  left: 0;
+  width: 100%;
+  height: 305px;  /* Фиксированная высота для блока с фотографиями */
+  padding: 5px; /* Отступ для создания пространства вокруг фотографий */
+  box-sizing: border-box; /* Учитываем padding в общей ширине */
+  background-color: #280404;
+  display: flex;
+  justify-content: space-around; /* Равномерное распределение пространства между фотографиями */
+  align-items: center;
+  z-index: 5;
+  overflow: hidden; /* Скрытие выходящего за пределы контента */
+}
+
+.photo-gallery img {
+  width: 300px; /* Фиксированная ширина для фотографий */
+  height: 300px; /* Фиксированная высота для фотографий */
+  object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+  margin: 2px; /* Уменьшенный отступ между фотографиями */
+}
+
+
+.text-block {
+  position: absolute;
+  top: calc(13% + 305px + 50px); /* Добавлено расстояние 50px */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  max-width: 1400px;
+  background-color: #280404;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 42px;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: 10;
+}
+
+.text-block h1 {
+  margin: 0; /* Убираем внешние отступы у заголовка */
+}
+
+.rating-title {
+  font-size: 25px; /* Размер шрифта надписи "Рейтинг" */
+  align-self: flex-start; /* Выравнивание по левому краю */
+  margin-left: 1.25cm; /* Отступ слева */
+}
+
+.rating-text {
+  font-size: 20px; /* Размер шрифта текста рейтинга */
+  text-align: justify; /* Выравнивание текста по ширине */
+  margin-left: 1.25cm; /* Отступ слева */
+	margin-right: 1.25cm; /* Отступ слева */
+  align-self: flex-start; /* Выравнивание по левому краю */
+}
+
+
+</style>
+</head>
+<body>
+  <div class="fixed-header">
+    <a href="index.html" class="logo-link">
+      <div class="logo">G</div>
+    </a>
+    <div class="section-title">Рецензии</div>
+  </div>
+  
+  <div class="photo-gallery">
+    <img src="jpeg/bona.jpg" alt="Описание фото">
+    <img src="jpeg/bona1.jpg" alt="Описание фото">
+    <img src="jpeg/bona3.jpg" alt="Описание фото">
+    <img src="jpeg/bona2.jpg" alt="Описание фото">
+  </div>
+
+
+	<div class="text-block">
+		<h1>Bona Capona</h1>
+		<div class="rating-title">Рейтинг: 4.83</div>
+		<p class="rating-text">
+			Любовь к жизни, гостеприимство, радость дружеского общения, 
+			удивительный вкус оригинальных блюд – это та атмосфера, 
+			которая царит в наших ресторанах.
+			Проект Bona Capona в Санкт-Петербурге – это уютные интерьеры в разных районах Питера. 
+			Здесь найдется место для корпоративных встреч, семейного отдыха, 
+			романтического вечера и отличных посиделок с друзьями. 
+			Для самых маленьких посетителей – детские комнаты и специальное меню.
+		</p>
+	</div>
+</body>
+</html>
